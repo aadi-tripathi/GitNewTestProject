@@ -1,18 +1,18 @@
-version: "1.0"
 info:
   model: int-scaffold
 packages:
-- name: GitNewTestProject
+- gitBranch: release/1.0.0
   gitServerName: aadiacc
   gitUrl: https://github.com/aadi-tripathi
   gitUsername: aadi-tripathi
-  gitBranch: main
+  name: GitNewTestProject
 services:
-- serviceName: project.gitnewtest.integrations:daf1
-  packages:
+- packages:
   - name: GitNewTestProject
-    version: "1.0"
-- serviceName: pub.date:getCurrentDate
-  packages:
+    version: 1.0.0
+  serviceName: project.gitnewtest.integrations:daf1
+- packages:
   - name: WmPublic
     version: 12.1.0.0.1066
+  serviceName: pub.date:getCurrentDate
+version: 1.0.0
